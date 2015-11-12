@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC8E761818676198BC52E5AA /* Pods_Tinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBEC8E54B5DD99773C9CFC1 /* Pods_Tinct.framework */; };
+		CC2E715B1BF2E5040085908B /* TinctPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E715A1BF2E5040085908B /* TinctPlot.swift */; };
 		CCFE70AA1BF12F0C00951D61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE70A91BF12F0C00951D61 /* AppDelegate.swift */; };
 		CCFE70AC1BF12F0C00951D61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE70AB1BF12F0C00951D61 /* ViewController.swift */; };
 		CCFE70AF1BF12F0D00951D61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCFE70AD1BF12F0D00951D61 /* Main.storyboard */; };
@@ -15,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		394C08F286CA49C11FB45C08 /* Pods-Tinct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tinct/Pods-Tinct.debug.xcconfig"; sourceTree = "<group>"; };
+		5120C0004572FC93E2BCC510 /* Pods-Tinct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinct.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tinct/Pods-Tinct.release.xcconfig"; sourceTree = "<group>"; };
+		9FBEC8E54B5DD99773C9CFC1 /* Pods_Tinct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC2E715A1BF2E5040085908B /* TinctPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinctPlot.swift; sourceTree = "<group>"; };
 		CCFE70A61BF12F0C00951D61 /* Tinct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFE70A91BF12F0C00951D61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCFE70AB1BF12F0C00951D61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8E761818676198BC52E5AA /* Pods_Tinct.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AB8FB0AA3FA80F2FE88B289 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FBEC8E54B5DD99773C9CFC1 /* Pods_Tinct.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7315E11DFAD31C30B5424428 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				394C08F286CA49C11FB45C08 /* Pods-Tinct.debug.xcconfig */,
+				5120C0004572FC93E2BCC510 /* Pods-Tinct.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CCFE709D1BF12F0C00951D61 = {
 			isa = PBXGroup;
 			children = (
 				CCFE70A81BF12F0C00951D61 /* Tinct */,
 				CCFE70A71BF12F0C00951D61 /* Products */,
+				7315E11DFAD31C30B5424428 /* Pods */,
+				2AB8FB0AA3FA80F2FE88B289 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				CCFE70B01BF12F0D00951D61 /* Assets.xcassets */,
 				CCFE70B21BF12F0D00951D61 /* LaunchScreen.storyboard */,
 				CCFE70B51BF12F0D00951D61 /* Info.plist */,
+				CC2E715A1BF2E5040085908B /* TinctPlot.swift */,
 			);
 			path = Tinct;
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCFE70B81BF12F0D00951D61 /* Build configuration list for PBXNativeTarget "Tinct" */;
 			buildPhases = (
+				DC5A95E9D00DE9FC76B533DB /* Check Pods Manifest.lock */,
 				CCFE70A21BF12F0C00951D61 /* Sources */,
 				CCFE70A31BF12F0C00951D61 /* Frameworks */,
 				CCFE70A41BF12F0C00951D61 /* Resources */,
+				C06099F78E99A48832B9E611 /* Embed Pods Frameworks */,
+				CA544F715CF8972A2475B60E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +126,7 @@
 				TargetAttributes = {
 					CCFE70A51BF12F0C00951D61 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = YB7V26C5G2;
 					};
 				};
 			};
@@ -130,11 +161,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C06099F78E99A48832B9E611 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tinct/Pods-Tinct-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA544F715CF8972A2475B60E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tinct/Pods-Tinct-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC5A95E9D00DE9FC76B533DB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CCFE70A21BF12F0C00951D61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2E715B1BF2E5040085908B /* TinctPlot.swift in Sources */,
 				CCFE70AC1BF12F0C00951D61 /* ViewController.swift in Sources */,
 				CCFE70AA1BF12F0C00951D61 /* AppDelegate.swift in Sources */,
 			);
@@ -247,23 +327,31 @@
 		};
 		CCFE70B91BF12F0D00951D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 394C08F286CA49C11FB45C08 /* Pods-Tinct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tinct/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cassiuschen.Tinct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		CCFE70BA1BF12F0D00951D61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5120C0004572FC93E2BCC510 /* Pods-Tinct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tinct/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cassiuschen.Tinct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +374,7 @@
 				CCFE70BA1BF12F0D00951D61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
