@@ -26,25 +26,26 @@
                                     <action selector="onPressRecordBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="0Jc-6v-RqS"/>
                                 </connections>
                             </button>
-                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBL-WY-dOc" customClass="TinctPlot" customModule="Tinct" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUF-sW-HWu" customClass="EZAudioPlot">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
-                            </glkView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.31372549020000001" green="0.75294117650000003" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zBL-WY-dOc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QsO-0n-Fvk"/>
-                            <constraint firstItem="zBL-WY-dOc" firstAttribute="centerX" secondItem="OXu-jG-oIg" secondAttribute="centerX" id="RG9-1f-aLh"/>
+                            <constraint firstItem="eUF-sW-HWu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="EhX-cd-ior"/>
+                            <constraint firstItem="eUF-sW-HWu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qfk-6k-G1w"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OXu-jG-oIg" secondAttribute="bottom" constant="67" id="RNm-YD-83I"/>
                             <constraint firstItem="OXu-jG-oIg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YxJ-bE-Sgu"/>
-                            <constraint firstItem="zBL-WY-dOc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gSA-a3-CXB"/>
-                            <constraint firstItem="zBL-WY-dOc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j1K-33-lBh"/>
+                            <constraint firstItem="eUF-sW-HWu" firstAttribute="centerX" secondItem="OXu-jG-oIg" secondAttribute="centerX" id="bmG-Jg-Tzq"/>
+                            <constraint firstItem="eUF-sW-HWu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eOF-WS-VLr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="recordBtn" destination="OXu-jG-oIg" id="p8y-bQ-keJ"/>
-                        <outlet property="recordGL" destination="zBL-WY-dOc" id="DqP-8M-ILY"/>
+                        <outlet property="recordView" destination="eUF-sW-HWu" id="aAQ-Qq-T5f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

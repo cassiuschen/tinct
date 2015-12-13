@@ -15,7 +15,8 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     var isRecording = false
     
     
-    @IBOutlet var recordGL: EZAudioPlotGL!
+
+    @IBOutlet var recordView: EZAudioPlot!
     @IBOutlet var recordBtn: UIButton!
     @IBAction func onPressRecordBtn(sender: AnyObject) {
         self.microphone.startFetchingAudio()
@@ -42,7 +43,7 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         setBgImg()
-        self.view.addSubview(self.recordGL)
+        self.view.addSubview(self.recordView)
         self.view.addSubview(self.recordBtn)
     }
     override func viewDidLayoutSubviews() {
@@ -68,10 +69,10 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     }
     
     func setPlotStyle() {
-        self.recordGL.plotType = EZPlotType(rawValue: 1)!
-        self.recordGL.backgroundColor = UIColor(white: 0/255, alpha: 0)
-        self.recordGL.shouldFill = true
-        self.recordGL.shouldMirror = false
+        self.recordView.plotType = EZPlotType(rawValue: 1)!
+        self.recordView.backgroundColor = UIColor(white: 0/255, alpha: 0)
+        self.recordView.shouldFill = true
+        self.recordView.shouldMirror = false
         
         /*
         let inputFormat : AudioStreamBasicDescription = EZAudioUtilities.monoFloatFormatWithSampleRate(self.RATE)
@@ -102,7 +103,7 @@ class ViewController: UIViewController, EZMicrophoneDelegate {
     
     func microphone(microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>>, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
         dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            self.recordGL.updateBuffer(buffer[0], withBufferSize: bufferSize)
+            self.recordView.updateBuffer(buffer[0], withBufferSize: bufferSize)
             //NSLog(buffer[0])
         })
     }
